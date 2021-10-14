@@ -1,0 +1,76 @@
+body {
+    margin: 0px;
+    /* background: #f3f3f3; */
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 450px;
+    height: 350px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.header .text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #545454;
+}
+
+.content {
+    margin-top: 2em;
+}
+
+.inputs input {
+    height: 20px;
+    border: none;
+    background: #f0f0f0;
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-top: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.mt-3 {
+    margin-top: 3em;
+}
+
+.submit-btn {
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    background: #6c5ce8;
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+}
+
+.footer a {
+    color: #6c5ce8;
+    text-decoration: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #acacac;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #acacac;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #acacac;
+  }

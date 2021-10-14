@@ -1,0 +1,93 @@
+body {
+    background-color: #a9b89e;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-wrapper {
+    background-color: white;
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-wrapper .header {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.form-wrapper .header i {
+    color: #50bfa4;
+    margin-top: 60px;
+}
+
+.form-wrapper .inner-wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+.form-wrapper .content {
+}
+
+.form-wrapper .content .inputs {}
+
+.form-wrapper .content input[type="text"], .form-wrapper .content input[type="password"] {
+    width: calc(100% - 20px);
+    height: 25px;
+    margin-top: 10px;
+    background-color: #eae6e1;
+    border: none;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #50bfa4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    height: 40px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+.mt-3 {
+    margin-top: 20px;
+}
+.mt-5{
+    margin-top: 50px;
+}
+.text-center {
+    text-align: center;
+}
+
+.color-gray {
+    color: gray;
+}
+
+.form-wrapper .footer .sign-un-btn{
+    width: 100px;
+    margin-left: 42px;
+    background-color: white;
+    color: #50bfa4;
+    border: 2px solid #50bfa4;
+    cursor: pointer;
+    font-size: 1.1em;
+    height: 40px;
+    font-weight: 500;
+    border-radius: 5px;
+}
