@@ -1,9 +1,32 @@
+body {
+    margin: 0px;
+}
+
 .red-square {
+    background-color: red;
     width: 200px;
     height: 200px;
-    background: red;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.yellow-triangle{
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.margin-70{
+    margin: 70px 70px 70px 70px;
+    border: 1px solid black;
+}
+
+
+.padding-70{
+    padding: 70px;
+    border: 1px solid black;
 }
