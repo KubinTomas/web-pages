@@ -1,0 +1,47 @@
+* {}
+
+.header, .footer {
+    padding: 30px;
+    height: 80px;
+    background-color: gray;
+}
+
+.content {
+    padding: 30px;
+}
+
+.content>div {
+    float: right;
+}
+
+.content .sidebar {
+    width: 25%;
+}
+
+.content .sidebar ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.content .sidebar ul li {
+    padding: 12px;
+    margin: 8px;
+    background-color: #33b5e5;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+}
+
+.content .sidebar ul li:hover {
+    background-color: #33a3cd;
+}
+
+.content .body {
+    width: 75%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

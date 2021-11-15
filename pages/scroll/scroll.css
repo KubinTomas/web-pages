@@ -84,3 +84,26 @@ body {
     border-radius: 50%;
     z-index: 0;
 }
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 38, 255);
+    outline: 1px solid rgb(0, 38, 255);
+}
+
+.text-dots {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    padding: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
