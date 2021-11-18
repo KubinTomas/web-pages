@@ -18,4 +18,30 @@ const fruits = [
     },
 ];
 
+const fruitWrapper = document.getElementById('fruitWrapper');
+console.log(fruitWrapper);
+
+for (let i = 0; i < fruits.length; i++) {
+    const fruit = fruits[i];
+
+    fruitWrapper.innerHTML += `<div class="flex-item">
+        <div class="img-wrapper" style="background-color: ${fruit.color};">
+            <img src="${fruit.img}" alt="">
+        </div>
+        <div>
+            <h3>${fruit.name}</h3>
+        </div>
+    </div>
+    `;
+
+    //     fruitWrapper.innerHTML += "<div class="flex-item">
+    //     <div class="img-wrapper">
+    //         <img src="" alt="">
+    //     </div>
+    //     <div>
+    //         <h3>name</h3>
+    //     </div>
+    // </div>";
+
+}
 
