@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.rectangle {
+    width: 10rem;
+    height: 10rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.rectangle-red {
+    background-color: red;
+}
+
+.rectangle-red:hover {
+    background-color: blue;
+}
+
+.rectangle-blue {
+    background-color: blue;
+}
+
+.rectangle-blue:hover {
+    background-color: red;
+}
+
+.rectangle-orange {
+    background-color: orange;
+}
+
+
+
+
+.hover-on-me:hover~.hidden {
+    display: inherit;
+}
+
+.hover-on-me-desc {
+    width: 60px;
+}
+
+.hover-on-me-desc:hover .hidden {
+    display: inherit;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: lightgoldenrodyellow;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
