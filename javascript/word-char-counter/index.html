@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="counter-wrapper">
+        <h2 class="title">Počítadlo slov a znaků</h2>
+        <div class="text-area-wrapper">
+            <textarea id="textarea" rows="25" cols="50" placeholder="Vložte zprávu">Ahoj     pes, kocka   a.</textarea>
+        </div>
+
+        <div class="btn-wrapper">
+            <button class="btn btn-primary" onclick="onEvaluateClick()">Vyhodnotit</button>
+        </div>
+
+        <div class="result-wrapper">
+            <span>Počet slov: </span><span id="wordCount">0</span><span>, </span>
+            <span>Počet znaků: </span><span id="charCount">0</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
