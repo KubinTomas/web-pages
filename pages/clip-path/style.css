@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-color: orange;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    background-image: linear-gradient(to bottom right, #5cfa134d, #0eb90e13), url("https://scx2.b-cdn.net/gfx/news/hires/2019/2-nature.jpg");
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    position: relative;
+}
+
+.title-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    color: white;
+    font-size: 60px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+
+    }
+
+    65% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
