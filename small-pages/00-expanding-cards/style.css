@@ -18,31 +18,32 @@ body {
 
 .panel {
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     height: 80vh;
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
     flex: 0.5;
     margin: 10px;
+    border-radius: 50px;
+    color: white;
     position: relative;
-    transition: flex 0.7s ease-in;
+    transition: flex .7s ease-in;
 }
 
 .panel h3 {
     font-size: 23px;
+
     position: absolute;
     bottom: 20px;
     left: 20px;
+
     opacity: 0;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
-.panel.active {
+.active {
     flex: 5;
 }
 
-.panel.active h3 {
+.active h3 {
     opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
 }
