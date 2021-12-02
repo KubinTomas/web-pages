@@ -1,0 +1,9 @@
+#rect {
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /* transition: top 0.5s ease-in; */
+    /* transition: left 0.5s ease-in; */
+    transition: 0.5s ease-in;
+}
