@@ -5,6 +5,10 @@ let wordGuessedByUser = hideWord(wordToGuess, '-')
 let mistakes = 0;
 const mistakesLimit = 5;
 
+// var, let, const
+// var
+// 
+
 refreshView();
 
 function makeGuess() {

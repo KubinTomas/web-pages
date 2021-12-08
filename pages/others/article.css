@@ -1,0 +1,27 @@
+.article {
+    display: flex;
+    width: 95vw;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.article .img {
+    min-width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.article .img img {
+    border-radius: 20px;
+}
+
+.article .content {
+    padding: 0px 20px 20px 20px;
+}
+
+p {
+    margin-top: 10px;
+}
