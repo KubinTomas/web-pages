@@ -1,0 +1,7 @@
+.simple-example::before {
+    content: 'before';
+}
+
+.simple-example::after {
+    content: 'after';
+}

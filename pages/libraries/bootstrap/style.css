@@ -1,0 +1,39 @@
+button.accordion-button:not(.collapsed)::after {
+    transform: rotate(75deg);
+}
+
+button.accordion-button.collapsed::after {
+    transform: rotate(-75deg);
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.bd-example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(39, 41, 43, 0.03);
+    border: 1px solid rgba(39, 41, 43, 0.1);
+}
+
+.row>div {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(39, 41, 43, 0.03);
+    border: 1px solid rgba(39, 41, 43, 0.1);
+}
