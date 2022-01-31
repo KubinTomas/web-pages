@@ -1,0 +1,25 @@
+.flex-wrapper {
+    display: flex;
+}
+
+.flex-wrapper .flex-item {
+    width: 300px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.flex-wrapper .flex-item .img-wrapper {
+    height: 60%;
+    background-color: red;
+    width: 100%;
+    border-radius: inherit;
+    text-align: center;
+}
+
+.flex-wrapper .flex-item .img-wrapper img {
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+}
