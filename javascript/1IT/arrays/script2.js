@@ -100,3 +100,32 @@ function sumec(a, b) {
 // 2 4 3 2 1
 // N: 2
 // N: 3
+
+const p = [2, 3, 4, 5, 6];
+const p2 = [999, 39399393, 33];
+
+stikaNaJelena(p, 2);
+// [4,3,2,1, 2, 1, 5]
+
+// Udelej Eshop, at ho muzu prodat
+
+// 1.. 4 + 3 + 2 + 1 -> 1 ... zacinam o 1 mene nez je N, a skacu po N
+// 2.. 3 + 1 ... 1, 3 -> 2
+// 3.. 2 + 1... 2, 5 -> 3
+// 4.. 1 ... 3
+
+// DRY Dont repeat yourself
+function stikaNaJelena(numbers, n) {
+
+    let result = 0;
+
+    for (let i = n - 1; i < numbers.length; i = i + n) {
+        // 0, 1, 2, 3
+        const number = numbers[i];
+        // 4, 3, 2, 1
+        result = result + number;
+        // result += number;
+    }
+
+    return result;
+}
