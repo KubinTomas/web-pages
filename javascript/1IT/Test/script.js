@@ -67,3 +67,20 @@ function buildTree(floorCount) {
 
     return tree;
 }
+
+function Max(numbers) {
+    if (numbers.length == 0) {
+        return null;
+    }
+    // [2,3,1,11]
+    let max = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        const element = numbers[i];
+
+        if (element > max) {
+            max = element;
+        }
+    }
+
+    return max;
+}
