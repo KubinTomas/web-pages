@@ -15,7 +15,7 @@ getOnlyNumbers(array2);
 function getOnlyNumbers(arrayOfEverything) {
     // return arrayOfEverything.filter(c =>  typeof c === 'number');
     let tmpArray = [];
-
+    //['x', 2, 'w', 3]
     for (let i = 0; i < arrayOfEverything.length; i++) {
         const element = arrayOfEverything[i];
         // 
@@ -45,7 +45,30 @@ function createNumbersUntil(n) {
 
     return numbers;
 }
+let xqwe = tree(3);
+console.log(xqwe);
+console.log(tree(3));
+function tree(height) {
 
+    let tree = '';
+
+    for (let i = 1; i <= height; i++) {
+
+        for (let j = 0; j < i; j++) {
+            tree += '*';
+            // i: 1, 1
+            // i: 2, 2
+            // i: 3, 3
+        }
+
+        tree += '\n';
+    }
+    return tree;
+}
+
+// "*
+//  **
+//  ***"
 //*
 //**
 //***
@@ -67,6 +90,26 @@ function buildTree(floorCount) {
 
     return tree;
 }
+
+const minNumArr = [21, 2, 44, 32, 1, 7, 8];
+min(minNumArr);
+
+function min(numbers) {
+    let min = numbers[0];
+    // 21, 2
+    for (let i = 1; i < numbers.length; i++) {
+        const element = numbers[i];
+
+        if (element < min) {
+            min = element;
+        }
+    }
+
+    return min;
+}
+
+// vytvorte funkci, ktera prijme pole cisel a vrati nejmensi cislo v poli
+// pokud pole cisel je prazdne vratne null
 
 function Max(numbers) {
     if (numbers.length == 0) {
