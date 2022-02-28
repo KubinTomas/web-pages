@@ -6,12 +6,19 @@
 // Udelejte funkci, ktera prijme pole cisel a secta jen licha cisla
 // Udelejte funkci, ktera prijme userName, userAge, title a vypise do konzole.. Ahoj: {userName}, je vam {userAge} a asi jste {title}.
 
-let numbers = [2, 4, 10, 2, 4];
+
+
+
+let numbers = [3, 2, 4, 10, 2, 4, 1];
 min([1, 2, 3, 4, 5]);
+min([1, 2]);
 min(numbers);
+
+min([1, 2, 3]);
+min([7, 8, 9]);
 function min(numbers) {
     let min = numbers[0];
-    for (let i = 0; i < numbers.length; i++) {
+    for (let i = 1; i < numbers.length; i++) {
         const element = numbers[i];
 
         if (element < min) {
@@ -34,7 +41,7 @@ function max(numbers) {
     }
 
     return max;
-    // return Math.min(...numbers);
+    // return Math.max(...numbers);
 }
 
 function avg(numbers) {
@@ -97,4 +104,11 @@ function outputUserInfo(userName, userAge, title) {
     const msg2 = `Ahoj: ${userName}, je vam ${userAge} a asi jste ${title}`;
 
     console.log(msg2);
+}
+
+
+function onTitleClick(name) {
+    const titleElement = document.getElementById('title');
+    titleElement.innerHTML = name;
+    titleElement.style.color = 'red'; // => style="color: red"
 }

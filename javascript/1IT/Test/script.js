@@ -72,6 +72,8 @@ function tree(height) {
 //*
 //**
 //***
+//**
+//*
 
 console.log('tree');
 console.log(buildTree(3));
@@ -127,3 +129,21 @@ function Max(numbers) {
 
     return max;
 }
+
+// Vytvorte funkci, ktera prijme cislo N a vrati faktorial 5! = 120
+// Vytvorte funkci, ktera prijme cislo N a vrati prvky fibonacaiho posloupnosti v listu
+// Vytvorte funkci, ktera prijme cislo N a vrati schody, N = 3
+//*
+//**
+//***
+// Vytvorte funkci, ktera prijme cislo N a vrati schody, N = 3
+//*
+//**
+//***
+//**
+//*
+// Vytvorte funkci, ktera prijme pole - [6, "x", 2, 3, "5", 2, "3"], a vrati soucet cisel, stringy to z ignoruje, 6+2+3+2=13
+// Vytorte funkci, ktera prijme N a vygeneruje heslo o N znacich, nahodne tam vlozte cisla a znaky A-Z
+// Vytvorte div 100x100 a dejte podnej tlacitko, na ktere kdyz kliknu tak divu da nahodnou background color - tudiz vytvorte i funkci, ktera tvori nahodnou rgb barvu
+// Udelejte funkci, ktera bude menit SRC u img, vlozte vzdy nahodny img src z pole o alespon 3 adresach
+

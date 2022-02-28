@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="numberA">
+    <input type="number" id="numberB">
+
+    <select name="operators" id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+    </select>
+
+    <button onclick="onCalculateClick()">
+        Vypocitat
+    </button>
+
+    <h1 id="result">0</h1>
+
+    <br>
+    <br>
+    <br>
+
+    <button onclick="addDiv()">+</button>
+    <button onclick="removeDiv()">-</button>
+    <br>
+    <br>
+
+    <div class="flex-container" id="flex-container">
+        <div>1</div>
+    </div>
+
+    <br>
+    <br>
+
+    <h1>Seznam účastníků</h1>
+    <h3>
+        Add participant
+    </h3>
+    <input type="text" placeholder="name" id="name">
+    <input type="number" placeholder="age" id="age">
+    <button onclick="addParticipant()">Add</button>
+
+    <ul id="participant-list">
+
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
