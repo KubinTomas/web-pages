@@ -75,3 +75,54 @@ function showParticipants() {
     }
 
 }
+
+
+// [neco, mesto, dalsiMesto]=['Neco','Praha','Usti']
+// const a = {
+//     name: 'Praha',
+//     age: 12
+// }
+
+// a.name
+// a.age
+function neco(x, ...y) {
+
+}
+
+function onCalculateClick2() {
+    const numbers = [...document.querySelectorAll('.number')]
+        .map(c => Number(c.value));
+
+    const a = [1, 2, 3, 4, 5, 6];
+    const b = a.filter(c => c < 4);
+    console.log(a)
+    console.log(b)
+
+    // const n1 = numbers[0];
+    // const n2 = numbers[1];
+
+    [n1, n2] = numbers;
+    console.log(n1);
+    console.log(n2);
+
+
+    const numberA = Number(document.getElementById('numberA').value);
+    const numberB = Number(document.getElementById('numberB').value);
+    const operator = document.getElementById('operators').value;
+
+    const resultElement = document.getElementById('result');
+
+    let result = 0;
+    if (operator === '+') {
+        result = numberA + numberB;
+    }
+
+    if (operator === '-') {
+        result = numberA - numberB;
+    }
+
+    resultElement.innerHTML = result;
+
+
+
+}
