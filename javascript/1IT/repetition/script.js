@@ -16,8 +16,6 @@ function onCalculateClick() {
     }
 
     resultElement.innerHTML = result;
-    resultElement.innerHTML = resultElement.innerHTML + `<div>1</div>`;
-
 }
 
 let divCount = 0;
@@ -82,26 +80,61 @@ function showParticipants() {
 //     name: 'Praha',
 //     age: 12
 // }
+[
+    { name: 'Pan P', age: 12 },
+    { name: 'Pan P', age: 12 },
+    { name: 'Pan P', age: 12 },
+    { name: 'Pan P', age: 12 },
 
+]
 // a.name
 // a.age
 function neco(x, ...y) {
 
 }
-
+neco(2, 3, 2, 4, 5, 5, 3, 4);
 function onCalculateClick2() {
+    console.log(document.querySelectorAll('.number'));
+
+    let a = [1, 2, 3, 4, 2];
+
+    // [1, 2, 3, 4, 2]
+    let b = [...a];
+
+    for (let i = 0; i < a.length; i++) {
+        const element = a[i];
+        b.push(element);
+    }
+
+    b.push(2);
+
+    const xwe = (a) => { return a * 2 };
+    const xweq = (a) => a * 2;
+
+    // [2, 3, 4]
+    let qq = [2, 3, 4];
+    let x = [2, 3, 4].map(c => c * 2);
+    // [4, 6, 8]
+
+    for (let i = 0; i < qq.length; i++) {
+        const element = qq[i];
+        qq[i] = element * 2;
+
+    }
+
     const numbers = [...document.querySelectorAll('.number')]
         .map(c => Number(c.value));
 
     const a = [1, 2, 3, 4, 5, 6];
-    const b = a.filter(c => c < 4);
+
     console.log(a)
     console.log(b)
 
     // const n1 = numbers[0];
     // const n2 = numbers[1];
 
-    [n1, n2] = numbers;
+    [n1, n2, n3] = numbers;
+
     console.log(n1);
     console.log(n2);
 
@@ -125,4 +158,14 @@ function onCalculateClick2() {
 
 
 
+}
+
+let person = { summary: 'Neco' };
+
+const n = [2, 3, 4];
+const n1 = [];
+for (let i = 0; i < n.length; i++) {
+    const element = n[i];
+
+    n1.push(element);
 }
