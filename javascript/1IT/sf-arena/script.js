@@ -1,15 +1,15 @@
 const hero = {
-    name: 'Vratislavino XVI',
+    name: 'Vrata',
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQlD_x-dUkXtRlUjnpy5tiWDU004hp52z5Iw&usqp=CAU',
-    hp: 420,
-    dmg: 15,
-    def: 6
+    dmg: 18,
+    def: 5,
+    hp: 200
 };
 
 const enemies = [
     {
         name: 'Zly Vratislavino XVI',
-        img: 'http://umpalumpove.cz/podzempic/p9/i.jpg',
+        img: 'https://media.discordapp.net/attachments/885781812826230784/954307456094330900/vratislavino.png?width=550&height=676',
         hp: 120,
         dmg: 18,
         def: 6
@@ -21,47 +21,29 @@ const enemies = [
         dmg: 18,
         def: 6
     },
-    {
-        name: 'Wea s 1ITCs',
-        img: 'http://umpalumpove.cz/podzempic/p9/i.jpg',
-        hp: 120,
-        dmg: 18,
-        def: 6
-    },
 ];
 
 showHero();
-
 function showHero() {
     document.getElementById('hero-name').innerHTML = hero.name;
-    document.getElementById('hero-hp').innerHTML = 'HP: ' + hero.hp;
-    document.getElementById('hero-dmg').innerHTML = 'DMG: ' + hero.dmg;
-    document.getElementById('hero-def').innerHTML = 'DEF: ' + hero.def;
-    document.getElementById('hero-image').src = hero.img;
+    document.getElementById('hero-img').src = hero.img;
+    document.getElementById('hero-dmg').innerHTML = hero.dmg;
+    document.getElementById('hero-def').innerHTML = hero.def;
+    document.getElementById('hero-hp').innerHTML = hero.hp;
 }
 
+
 showEnemy();
-
 function showEnemy() {
-
-    if (enemies.length == 0) {
-        alert('Hrac vyhral');
-
-        return;
-    }
-
     const enemy = enemies[0];
 
     document.getElementById('enemy-name').innerHTML = enemy.name;
-    document.getElementById('enemy-hp').innerHTML = 'HP: ' + enemy.hp;
-    document.getElementById('enemy-dmg').innerHTML = 'DMG: ' + enemy.dmg;
-    document.getElementById('enemy-def').innerHTML = 'DEF: ' + enemy.def;
-    document.getElementById('enemy-image').src = enemy.img;
+    document.getElementById('enemy-img').src = enemy.img;
+    document.getElementById('enemy-dmg').innerHTML = enemy.dmg;
+    document.getElementById('enemy-def').innerHTML = enemy.def;
+    document.getElementById('enemy-hp').innerHTML = enemy.hp;
 }
 
-// setTimeout(() => {
-// ...
-// }, 1000)
 function fight() {
     const enemy = enemies[0];
 
@@ -69,36 +51,56 @@ function fight() {
         enemy.hp = enemy.hp - hero.dmg + enemy.def;
 
         if (enemy.hp > 0) {
-            hero.hp = hero.hp - enemy.dmg + hero.def;
+            hero.hp = hero.hp + hero.def - enemy.dmg;
         }
     }
 
-    if (enemy.hp <= 0) {
-        enemies.splice(0, 1);
-        showEnemy();
-    }
-
     if (hero.hp <= 0) {
-        alert('Asi jsi umrel');
+        alert('hrdina umrel');
     }
 
     showHero();
+
+    if (enemy.hp <= 0) {
+        enemies.splice(0, 1);
+
+        if (enemies.length === 0) {
+            alert('Hrdina vyhral');
+        } else {
+            showEnemy();
+        }
+    }
+
 }
 
 setInterval(() => {
-    console.log('SPAWN POTIONU');
-    const img = document.createElement('img');
-    img.src = 'https://e7.pngegg.com/pngimages/237/536/png-clipart-potion-computer-icons-potion-miscellaneous-game-thumbnail.png';
-    img.style.position = 'absolute';
-    img.style.top = '100px';
-    img.style.left = '550px';
+    const imgElement = document.createElement('img');
+    imgElement.src = 'https://e7.pngegg.com/pngimages/237/536/png-clipart-potion-computer-icons-potion-miscellaneous-game-thumbnail.png';
+    imgElement.style.position = 'absolute';
+    imgElement.style.top = `${getRndInteger(20, 800)}px`;
+    imgElement.style.left = `${getRndInteger(20, 800)}px`;
 
-    img.addEventListener('click', () => {
-        hero.hp += 1000;
-        document.body.removeChild(img);
+    // `${getRndInteger(20, 800)}px`; -> getRndInteger(20, 800) + "px";
+
+    imgElement.addEventListener('click', () => {
+        hero.hp += 20;
         showHero();
+
+        imgElement.remove();
     });
 
-    document.body.appendChild(img);
+    document.body.appendChild(imgElement);
+
+    setTimeout(() => {
+        imgElement.remove();
+
+    }, 2000)
+
 }, 5000);
 
+// w3schools random javascript, uplne dole
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// [] - pope, {} - objekt
