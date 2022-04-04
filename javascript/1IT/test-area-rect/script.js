@@ -1,6 +1,7 @@
 function spocitej() {
+    // jahoda
     const text = document.getElementById('txt').value;
-    const znakyPocet = text.length;
+    const znakyPocet = text.length; // 6
 
     let aCount = 0;
     for (let i = 0; i < text.length; i++) {
@@ -11,12 +12,17 @@ function spocitej() {
 
     const msg = "Pocet znaku: " + znakyPocet + ", vyskyt a: " + aCount;
     document.getElementById('output').innerHTML = `Pocet znaku: ${znakyPocet}, vyskyt a: ${aCount}`;
+
 }
 
+function test() {
+
+}
 
 setInterval(() => {
     createBall();
 }, 2000);
+
 // const colors = ['red', 'orange', 'blue'];
 // colors[getRndInteger(0, colors.length)];
 let score = 0;
@@ -40,7 +46,7 @@ function createBall() {
     document.body.appendChild(ball);
 
     setTimeout(() => {
-        // document.body.removeChild(ball);
+        //  document.body.removeChild(ball);
         ball.remove();
     }, 5000);
 
@@ -53,16 +59,23 @@ function createBall() {
 }
 
 function getRndInteger(min, max) {
+    // 0 - 1, 0.34343423425  * 50 -> 15.343464634 -> 15
+
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
 const itemsElement = document.getElementById('items-to-buy');
-const items = [{ name: 'Mrkev', price: 12 }, { name: 'Jablko', price: 12 }, { name: 'Pomeranc', price: 12 }];
+const items = [
+    { name: 'Mrkev', price: 12, img: '' },
+    { name: 'Jablko', price: 12 },
+    { name: 'Pomeranc', price: 12 }
+];
 
 const itemsInCart = [];
-
+// 
 for (let i = 0; i < items.length; i++) {
     const item = items[i];
+    // 0 .. { name: 'Mrkev', price: 12, img: '' }
 
     const itemElement = document.createElement('div');
 
