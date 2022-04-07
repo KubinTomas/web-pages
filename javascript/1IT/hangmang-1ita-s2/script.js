@@ -3,6 +3,7 @@ const words = ['apple', 'orange', 'strawberry', 'blueberry'];
 let currentWord = '';
 let hiddenCurrentWord = '';
 let mistakeCounter = 0;
+let maxMistakeCount = 12;
 
 // setInterval(startGame, 300);
 // {mistakeCounter}.png .. 0.png, 1.png, ...
@@ -23,23 +24,43 @@ function guess(letter) {
     letter = letter.toLowerCase();
     // ahoj
     // ----
-    // -> a
+    // -> o
+    let didMistake = true;
+
     let hWord = '';
     for (let i = 0; i < currentWord.length; i++) {
         const letterInWord = currentWord[i].toLowerCase();
 
         if (letterInWord === letter) {
             hWord += currentWord[i];
+            didMistake = false;
         } else {
             hWord += hiddenCurrentWord[i];
         }
 
     }
 
+    if (didMistake) {
+        mistakeCounter++;
+    }
+
     hiddenCurrentWord = hWord;
 
-    console.log(currentWord);
-    console.log(hiddenCurrentWord);
+    if (didUserWin()) {
+        alert("User won the game")
+    }
+
+    if (didUserLoose()) {
+        alert("User lost the game")
+    }
+}
+
+function didUserWin() {
+    return hiddenCurrentWord === currentWord;
+}
+
+function didUserLose() {
+    return mistakeCounter === maxMistakeCount;
 }
 
 // ahoj -> ----
