@@ -11,10 +11,17 @@
 <body>
     <h1>Awesome Hangman</h1>
     <img src="" alt="" id="hangman">
-    <span id="mistakeCounter">asds</span>
+    <span id="mistakeCounter"></span>
     <h3 id="hiddenWord"></h3>
     <input type="text" id="guessInput">
-    <button>Guess</button>
+    <button onclick="onGuessClick()">Guess</button>
+
+    <div id="neco" style="display: none; position: absolute; top: 0px; left: 0px; 
+    width: 100vw;height: 100vh; background-color:rgba(255 0 0 / 70%); ">
+        <button style="position: absolute; top: 20px; left: 20px;
+        font-size: 2rem; border: 0; border-radius:5px; padding: 10px; cursor: pointer" onclick="startGame()">Play
+            again</button>
+    </div>
 
     <script src="script.js"></script>
 </body>

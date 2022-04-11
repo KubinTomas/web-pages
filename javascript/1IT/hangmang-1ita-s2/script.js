@@ -5,13 +5,21 @@ let hiddenCurrentWord = '';
 let mistakeCounter = 0;
 let maxMistakeCount = 12;
 
+const hangmanImgElement = document.getElementById('hangman');
+const mistakeCounterElement = document.getElementById('mistakeCounter');
+const hiddenWordElement = document.getElementById('hiddenWord');
+const guessInputElement = document.getElementById('guessInput');
+
 // setInterval(startGame, 300);
 // {mistakeCounter}.png .. 0.png, 1.png, ...
 startGame();
 function startGame() {
+    document.getElementById('neco').style.display = 'none';
     currentWord = getRandomWord(words);
     hiddenCurrentWord = getHiddenWord(currentWord);
     mistakeCounter = 0;
+
+    updateUI();
 
     // zmena html
     console.log(currentWord);
@@ -19,6 +27,26 @@ function startGame() {
     console.log('\n');
 }
 
+function updateUI() {
+    mistakeCounterElement.innerHTML = mistakeCounter;
+    hiddenWordElement.innerHTML = hiddenCurrentWord;
+    hangmanImgElement.src = `images/${mistakeCounter}.png`;
+}
+
+function onGuessClick() {
+    const value = guessInputElement.value;
+    guessInputElement.value = '';
+
+    guess(value);
+
+    return;
+    if (value.length === 1) {
+        guess(value);
+    } else {
+        alert('Zadejte jen jedno pismeno');
+    }
+
+}
 // A -> a
 function guess(letter) {
     letter = letter.toLowerCase();
@@ -46,13 +74,23 @@ function guess(letter) {
 
     hiddenCurrentWord = hWord;
 
-    if (didUserWin()) {
-        alert("User won the game")
-    }
+    updateUI();
 
-    if (didUserLoose()) {
-        alert("User lost the game")
-    }
+    setTimeout(() => {
+        const e = document.getElementById('neco');
+        if (didUserWin()) {
+            e.style.display = 'block';
+            e.style.backgroundColor = 'rgba(0 255 25 / 70%)';
+            alert("User won the game")
+        }
+
+        if (didUserLose()) {
+            e.style.display = 'block';
+            e.style.backgroundColor = 'rgba(255 0 0 / 70%)';
+            alert("User lost the game")
+        }
+    }, 50);
+
 }
 
 function didUserWin() {

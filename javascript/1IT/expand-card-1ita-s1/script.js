@@ -1,3 +1,9 @@
+const divElement = document.createElement('div');
+divElement.style.accentColor
+alert(window.innerWidth);
+divElement.id = 'mojeID';
+// divElement.style.accentColor
+
 const cards = [
     {
         title: 'Apple',
