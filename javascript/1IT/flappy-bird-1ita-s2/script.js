@@ -31,7 +31,7 @@ document.addEventListener('keydown', (ev) => {
 
 setInterval(() => {
     const obstalce = spawnObstacle();
-    // obstacles.push(obstalce);
+    obstacles.push(obstalce);
 }, 500);
 
 setInterval(() => {
