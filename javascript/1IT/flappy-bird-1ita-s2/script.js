@@ -14,6 +14,8 @@ function createPlayer() {
 }
 
 // direction +1, move player down, -1 move player up
+// '500px' -> 5
+// '5px' -> 3
 function movePlayerVertical(direction) {
     const length = player.style.top.length;
     player.style.top = Number(player.style.top.slice(0, length - 2)) + direction * teleportationDistance + 'px';
@@ -36,7 +38,7 @@ setInterval(() => {
 
 setInterval(() => {
     moveObstacles();
-}, 100)
+}, 100);
 
 function moveObstacles() {
     obstacles.forEach(obstacle => {
