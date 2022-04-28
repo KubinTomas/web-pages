@@ -9,8 +9,8 @@ function createEnemy() {
     enemyElement.style.borderRadius = '7.5px';
 
     enemyElement.style.position = 'absolute';
-    enemyElement.style.top = '100px';
-    enemyElement.style.left = '100px';
+    enemyElement.style.top = `${getRandomNumber(0, 1000)}px`;
+    enemyElement.style.left = `${getRandomNumber(0, 2000)}px`;
 
     document.body.appendChild(enemyElement);
 
@@ -18,7 +18,9 @@ function createEnemy() {
 }
 
 setInterval(() => {
-    enemies.push(createEnemy());
+    if (enemies.length < 20) {
+        enemies.push(createEnemy());
+    }
 }, 1000);
 
 setInterval(() => {
@@ -43,4 +45,8 @@ function moveEnemyVertical(enemy, direction) {
 
 function moveEnemyHorizontal(enemy, direction) {
     enemy.style.left = Number(enemy.style.left.slice(0, enemy.style.left.length - 2)) + direction * 1 + 'px';
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }

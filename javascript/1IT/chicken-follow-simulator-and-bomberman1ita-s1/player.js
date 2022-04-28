@@ -1,5 +1,5 @@
 const player = createPlayer();
-const playerSpeed = 1;
+const playerSpeed = 3;
 
 let pressedKeys = [];
 
@@ -54,8 +54,10 @@ setInterval(() => {
 
 document.addEventListener('keydown', (ev) => {
     // movePlayer(ev.code);
+    // KeyW, KeyS
+    // KeyW, KeyD
+    // KeyD
 });
-
 
 document.addEventListener('keypress', (ev) => {
     if (!pressedKeys.includes(ev.code)) {
@@ -67,3 +69,5 @@ document.addEventListener('keypress', (ev) => {
 document.addEventListener('keyup', (ev) => {
     pressedKeys = pressedKeys.filter(c => c != ev.code);
 });
+
+
