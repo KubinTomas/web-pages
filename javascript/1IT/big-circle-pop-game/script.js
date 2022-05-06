@@ -1,9 +1,9 @@
 let score = 0;
 setInterval(() => {
-    spawnCircle();
+    spawnRect();
 }, 2000);
 
-function spawnCircle() {
+function spawnRect() {
     const circle = document.createElement('div');
     circle.style.backgroundColor = getRandomColor();
 
