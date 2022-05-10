@@ -9,15 +9,16 @@
 </head>
 
 <body>
-    <input type="text" onkeydown="updateWordLetterCounter(this)">
-    <span id="counter"></span>
+    <h1 id="mistake"></h1>
+    <h3>Vstup uzivatele</h3>
+    <input type="text" onkeydown="checkLetters(this)">
 
-    <p>
-        Ahoj
-    </p>
+    <h3>Text</h3>
+    <input type="text" id="text">
+    <button onclick="loadText()">Load text</button>
 
-    <p>
-        <span style="color: red">A</span><span>h</span><span>o</span><span>j</span>
+    <p id="p">
+
     </p>
 
     <script src="script.js"></script>

@@ -9,3 +9,32 @@ function updateWordLetterCounter(input) {
 
     counterElement.innerHTML = `Slov: ${wordCount}, znaky: ${letterCount}`;
 }
+
+let textToWrite = 'Ahoj, dneska jdu nakoupit'; // 30
+let textWrittenByUserSoFar = 'Amanda';
+let matchCounter = 0;
+
+const spans = [];
+
+const paragraph = document.createElement('p');
+paragraph.innerHTML = textToWrite
+
+for (let i = 0; i < textToWrite.length; i++) {
+    const element = textToWrite[i];
+
+    const e = document.createElement('span');
+    spans.push(e);
+}
+
+
+
+for (let i = 0; i < textWrittenByUserSoFar.length; i++) {
+    const letter = textWrittenByUserSoFar[i]; // A
+    const textToWriteLetter = textToWrite[i];
+
+    if (letter === textToWriteLetter) {
+        matchCounter++;
+        spans[i].style.backgroundColor = 'red';
+    }
+
+}
