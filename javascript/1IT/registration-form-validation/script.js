@@ -1,0 +1,4 @@
+function validateRegistrationForm() {
+
+    return false;
+}
