@@ -20,6 +20,7 @@ function loadText() {
 }
 
 function checkLetters(input) {
+    mistakeCounter = 0;
     if (spans.length === 0) {
         return;
 
