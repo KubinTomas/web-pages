@@ -47,8 +47,22 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.error {}
 
-.error.form-control input[type="text"], error.form-control input[type="password"] {
+.error.form-control input[type="text"],
+.error.form-control input[type="password"] {
     border: 1px solid red;
+}
+
+.error.form-control label {
+    color: red;
+}
+
+.error.form-control .error-text {
+    display: initial;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.8em;
+    display: none;
 }
