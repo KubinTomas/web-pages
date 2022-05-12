@@ -46,3 +46,9 @@ input[type="submit"] {
     width: 100%;
     cursor: pointer;
 }
+
+.error {}
+
+.error.form-control input[type="text"], error.form-control input[type="password"] {
+    border: 1px solid red;
+}
