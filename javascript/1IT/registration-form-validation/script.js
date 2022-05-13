@@ -1,40 +1,38 @@
 function validateRegistrationForm() {
-
+    let formValid = true;
     const nameElement = document.forms['registrationForm']['name'];
+    console.log(nameElement);
 
-    const invalidName = validateName(nameElement);
-
-    if (invalidName) {
-        return false;
+    if (!isNameInputValid(nameElement)) {
+        formValid = false;
     }
+
+    return formValid;
 }
 
-function validateName(nameElement) {
-    let invalid = false;
+function isNameInputValid(nameElement) {
+    let valid = true;
 
-    const parent = nameElement.parentElement;
-    const errorTextElement = parent.querySelector('.error-text');
+    const parentElement = nameElement.parentElement;
+    const errorTextElement = parentElement.querySelector('.error-text');
 
-    parent.classList.remove('error');
-
-    // kontrola validity
     const value = nameElement.value;
+    parentElement.classList.remove('error');
 
-
-    if (value.length <= 2) {
-        errorTextElement.innerHTML = "Minimum 3 chars for name!";
-        invalid = true;
+    if (value.length <= 3) {
+        valid = false;
+        errorTextElement.innerHTML = 'Name has to be at least 3 characters long!';
     }
-
 
     if (value.length === 0) {
-        errorTextElement.innerHTML = "Name is required!";
-        invalid = true;
+        valid = false;
+        errorTextElement.innerHTML = 'Field is required!';
     }
 
-    if (invalid) {
-        parent.classList.add('error');
+    if (!valid) {
+        parentElement.classList.add('error');
     }
 
-    return invalid;
+    return valid;
 }
+
