@@ -12,8 +12,9 @@
 
 <body>
 
-    <table>
+    <table id="userTable">
         <thead>
+            <th>ID</th>
             <th>Name</th>
             <th>Contact</th>
             <th>Age</th>
@@ -22,6 +23,7 @@
         </thead>
         <tbody>
             <tr>
+                <td>1</td>
                 <td>Joe Doe</td>
                 <td>
                     <span>email@email.cz</span><br>
@@ -40,6 +42,20 @@
     <script src="user.model.js"></script>
     <script src="../company/company.model.js"></script>
     <script src="user-list.js"></script>
+
+    <script>
+
+        const httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState === 4) {
+                console.log(httpRequest);
+                console.log(JSON.parse(httpRequest.responseText));
+            }
+        }
+        httpRequest.open('GET', 'http://localhost:3000/users');
+        httpRequest.send();
+
+    </script>
 </body>
 
 </html>
